@@ -1,7 +1,0 @@
-model,condition,n,accuracy,false_support_rate,false_rejection_rate,abstention_rate
-Qwen2.5-3B,launch,128,0.046875,0.078125,0.984375,0.84375
-Qwen2.5-3B,receipt,128,0.5078125,0.0,0.0,0.4921875
-Qwen2.5-3B,static,128,0.0,0.0,1.0,1.0
-Qwen2.5-Coder-1.5B,launch,128,0.578125,0.0,0.78125,0.03125
-Qwen2.5-Coder-1.5B,receipt,128,0.8046875,0.0,0.390625,0.0
-Qwen2.5-Coder-1.5B,static,128,0.5,0.0,1.0,0.0

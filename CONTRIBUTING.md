@@ -1,40 +1,28 @@
-# Contributing to AutoResearchClaw
+# Contributing to RanchoResearch
+
+RanchoResearch is a maintained derivative of AutoResearchClaw. See [upstream and licensing notices](THIRD_PARTY_NOTICES.md).
 
 ## Setup
 
-1. Fork and clone the repo
-2. Create a venv and install with dev extras:
-   ```
-   python3 -m venv .venv && source .venv/bin/activate
-   pip install -e ".[dev]"
-   ```
-3. Generate your local config:
-   ```
-   researchclaw init
-   ```
-4. Edit `config.arc.yaml` with your LLM settings
-
-## Config Convention
-
-- `config.researchclaw.example.yaml` — tracked template (do not add secrets)
-- `config.arc.yaml` — your local config (gitignored, created by `researchclaw init`)
-- `config.yaml` — also gitignored, supported as fallback
-
-## Running Tests
-
-```
-pytest tests/
+```bash
+python -m venv .venv
+# Activate your environment
+python -m pip install -e ".[dev]"
+ranchoresearch --help
+python -m pytest tests/test_public_release_contract.py -q
 ```
 
-## Checking Your Environment
+For broader regression coverage run `python -m pytest tests/ -q`. Some integrations need external services or optional extras and should be explicitly identified as not run when unavailable.
 
-```
-researchclaw doctor
-```
+## Pull requests
 
-## PR Guidelines
+- Make one coherent change per PR and explain which executable checks you actually ran.
+- Preserve existing `researchclaw` imports and command compatibility unless the change includes a tested migration.
+- Keep personal scientific projects, manuscript drafts, large weights, local paths, cached logs and secrets out of the public distribution.
+- Clearly distinguish observed experiment measurements from simulated outputs and proposed work.
+- Preserve copyright/license notices for inherited code and third-party assets.
+- Changes to scientific reproduction boundaries or Git history require separate review.
 
-- Branch from main
-- One concern per PR
-- Ensure `pytest tests/` passes
-- Include tests for new functionality
+## Reporting security issues
+
+Do not paste keys, internal paths, private research, or exploit details into public issues. Use GitHub's private vulnerability reporting when available, or contact the repository owner through an appropriate private channel.
