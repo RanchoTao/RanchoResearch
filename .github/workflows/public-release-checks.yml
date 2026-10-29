@@ -1,0 +1,28 @@
+name: Public release checks
+
+on:
+  push:
+    branches: [main, "cleanup/**"]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  python-smoke:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install editable distribution and test tools
+        run: python -m pip install -e ".[dev]"
+      - name: Compile Python packages
+        run: python -m compileall -q researchclaw autoresearch_state
+      - name: Release-boundary contract
+        run: python -m pytest tests/test_public_release_contract.py -q
+      - name: CLI help smoke test
+        run: |
+          ranchoresearch --help
+          researchclaw --help

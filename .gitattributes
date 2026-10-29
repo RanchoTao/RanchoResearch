@@ -1,2 +1,0 @@
-# Candidate A is a byte-frozen archive; do not rewrite line endings on checkout.
-archive/candidate_a/** -text

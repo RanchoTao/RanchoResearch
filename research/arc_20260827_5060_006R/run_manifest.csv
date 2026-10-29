@@ -1,8 +1,0 @@
-stage,execution_level,status,gpu_used,network_requested,output
-local_artifact_audit,1,completed,false,false,resource_baseline.md
-contract_freeze,2,completed,false,false,assay_repair_preregistration.md
-canonical_reanalysis,2,completed,false,false,corrected_results.csv
-statistical_reseal,2,completed,false,false,results/corrected_summary.json
-figure_generation,2,completed,false,false,figures/
-independent_data_qa,2,completed,false,false,assay_integrity_check.md
-network_counter_audit,2,warning,false,false,resource_usage.md

@@ -145,3 +145,25 @@ external/agents/ColliderAgent/*
 
 # Nested external checkout (keep the local repository out of this project)
 meta_arc05/external/Remarkable-Robustness-of-LLMs/
+
+# Public software release boundary: do not recommit historical research assets
+/ICLR2027_HANDOFF/
+/arc02/
+/arc21/
+/archive/
+/gap_mining/
+/knowledge_base/
+/meta_arc02/
+/meta_arc05/
+/paper/
+/research/
+/run_inputs/
+/tmp/
+/releases/
+/doctor-report.json
+/iclr-2027-style-files.zip
+/reproduce.py
+/requirements-display.txt
+/.acpxrc.json
+/START_HERE.md
+/SETUP_REQUIRED.md

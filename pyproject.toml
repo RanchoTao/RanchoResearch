@@ -1,7 +1,7 @@
 [project]
-name = "researchclaw"
+name = "ranchoresearch"
 version = "0.5.0"
-description = "AutoResearchClaw — Autonomous Research Pipeline. Turn any research idea into a paper."
+description = "RanchoResearch — evidence-aware research automation (derived from AutoResearchClaw)."
 requires-python = ">=3.11"
 dependencies = [
     "pyyaml>=6.0",
@@ -10,7 +10,7 @@ dependencies = [
     "numpy>=1.24",
 ]
 readme = "README.md"
-license = {text = "MIT"}
+license = {text = "Apache-2.0 AND MIT"}
 
 [project.optional-dependencies]
 anthropic = ["httpx>=0.24"]
@@ -29,11 +29,12 @@ all = [
 dev = ["pytest>=7.0", "pytest-asyncio>=0.21", "httpx>=0.24"]
 
 [project.scripts]
+ranchoresearch = "researchclaw.cli:main"
 researchclaw = "researchclaw.cli:main"
 autoresearch-state = "autoresearch_state.cli:main"
 
 [tool.hatch.build.targets.wheel]
-packages = ["researchclaw", "sibyl", "arc", "autoresearch_state"]
+packages = ["researchclaw", "autoresearch_state"]
 
 [tool.hatch.build.targets.wheel.force-include]
 "researchclaw/templates/styles" = "researchclaw/templates/styles"

@@ -1,4 +1,0 @@
-condition,n,false_support_rate,false_rejection_rate,abstention_rate,actual_label_accuracy,balanced_accuracy_decided_only,macro_f1_all,parse_errors
-launch,128,0.078125,0.984375,0.84375,0.046875,0.75,0.057832988267770884,9
-receipt,128,0.0,0.0,0.4921875,0.5078125,1.0,0.34358974358974353,0
-static,128,0.0,1.0,1.0,0.0,,0.0,0
