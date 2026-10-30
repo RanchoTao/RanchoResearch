@@ -3,7 +3,7 @@ name: research-evidence-gate
 description: Audit research hypotheses, scientific novelty, measurement validity, simple baselines, evidence-backed GO/HOLD/KILL decisions, and controlled multi-project research launches. Use before experiments, after results, or when reviewing research portfolios.
 metadata:
   category: experiment
-  trigger-keywords: "hypothesis,experiment,baseline,novelty,evidence,claim,decision,gate,research,review"
+  trigger-keywords: "literature_screen,synthesis,hypothesis_gen,experiment_design,resource_planning,experiment_run,result_analysis,research_decision,paper_outline,peer_review,quality_gate,knowledge_archive,baseline,novelty,evidence,claim"
   applicable-stages: "5,7,8,9,11,12,14,15,16,18,20,21"
   priority: "1"
   version: "1.0.0"
