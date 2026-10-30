@@ -495,7 +495,22 @@ class TestSkillRegistry:
     def test_builtin_skillmd_count(self) -> None:
         """All builtin skills should load from SKILL.md."""
         registry = SkillRegistry()
-        assert registry.count() == 20
+        builtin_dir = Path(__file__).resolve().parents[1] / "researchclaw" / "skills" / "builtin"
+        assert registry.count() == len(list(builtin_dir.rglob("SKILL.md")))
+
+    def test_research_evidence_gate_loads_and_matches_stages(self) -> None:
+        """The research evidence skill must load and match even for Chinese-only topics."""
+        registry = SkillRegistry()
+        skill = registry.get("research-evidence-gate")
+        assert skill is not None
+        assert skill.category == "experiment"
+        assert "INVALID_MEASUREMENT" in skill.body
+        for stage_name in (
+            "hypothesis_gen", "experiment_design", "experiment_run",
+            "result_analysis", "research_decision", "quality_gate",
+        ):
+            matched = registry.match(f"{stage_name} 多尺度科研问题", stage=stage_name)
+            assert "research-evidence-gate" in {s.name for s in matched}
 
     def test_register_custom(self, sample_skill: Skill) -> None:
         registry = SkillRegistry()
@@ -561,7 +576,7 @@ class TestSkillRegistry:
 
     def test_registry_external_dirs(self, external_skillmd_dir: Path) -> None:
         registry = SkillRegistry(external_dirs=[str(external_skillmd_dir)])
-        assert registry.count() == 21  # 20 builtin + 1 external
+        assert registry.count() == SkillRegistry().count() + 1  # builtins + external
         skill = registry.get("hep-feynrules")
         assert skill is not None
         assert skill.category == "domain"
