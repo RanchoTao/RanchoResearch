@@ -1,0 +1,194 @@
+# Synthetic fixture only. No historical or private research data.
+schema_version: 0.1.0
+migration:
+  source_version: null
+  target_version: 0.1.0
+  migrated_at: '2000-01-01T00:00:00Z'
+  migration_id: synthetic-fixture-v1
+  notes: Fresh fictional software-test fixture; not a research result or historical
+    archive.
+project:
+  id: proj_00000000000000000000000001
+  title: Synthetic protocol review
+  short_name: synthetic-state
+  description: Fictional state used only to test schema, graph, CLI, and packaging
+    behavior.
+  created_at: '2000-01-01T00:00:00Z'
+  updated_at: '2000-01-01T00:00:00Z'
+  status: FROZEN
+  research_domain:
+  - software testing
+  owners: []
+  advisors: []
+  repository: null
+  current_decision: dec_00000000000000000000000003
+  current_research_decision: dec_00000000000000000000000002
+  current_research_verdict: RESTRICTED_GO
+  current_phase: software fixture validation
+  priority: LOW
+  tags: []
+  dependencies:
+  - dep_00000000000000000000000001
+  active_hypotheses:
+  - hyp_00000000000000000000000001
+  next_action: null
+  resume_point: Inspect the synthetic protocol-review dependency; no scientific execution
+    is authorized.
+  frozen_at: null
+  archived_at: null
+hypotheses:
+- id: hyp_00000000000000000000000001
+  project_id: proj_00000000000000000000000001
+  statement: Fictional branch 1; no real-world scientific assertion.
+  formal_statement: null
+  status: FROZEN
+  parent_hypothesis: null
+  children: []
+  assumptions: []
+  supporting_claims: []
+  attacking_claims: []
+  created_by: synthetic-fixture
+  created_at: '2000-01-01T00:00:00Z'
+  last_updated: '2000-01-01T00:00:00Z'
+  confidence: null
+  kill_reason: null
+  human_verification: UNREVIEWED
+- id: hyp_00000000000000000000000002
+  project_id: proj_00000000000000000000000001
+  statement: Fictional branch 2; no real-world scientific assertion.
+  formal_statement: null
+  status: REFUTED
+  parent_hypothesis: null
+  children: []
+  assumptions: []
+  supporting_claims: []
+  attacking_claims: []
+  created_by: synthetic-fixture
+  created_at: '2000-01-01T00:00:00Z'
+  last_updated: '2000-01-01T00:00:00Z'
+  confidence: null
+  kill_reason: Fictional branch-only negative result.
+  human_verification: UNREVIEWED
+claims:
+- id: claim_00000000000000000000000001
+  project_id: proj_00000000000000000000000001
+  statement: Synthetic claim 1 for reference validation.
+  claim_type: ENGINEERING
+  scope: Fictional software test data only.
+  status: UNVERIFIED
+  confidence: null
+  supporting_evidence: []
+  opposing_evidence: []
+  dependencies: []
+  source: []
+  created_by: synthetic-fixture
+  reviewed_by: []
+  created_at: '2000-01-01T00:00:00Z'
+  last_verified_at: null
+  human_verification: UNREVIEWED
+- id: claim_00000000000000000000000002
+  project_id: proj_00000000000000000000000001
+  statement: Synthetic claim 2 for reference validation.
+  claim_type: ENGINEERING
+  scope: Fictional software test data only.
+  status: UNVERIFIED
+  confidence: null
+  supporting_evidence: []
+  opposing_evidence: []
+  dependencies: []
+  source: []
+  created_by: synthetic-fixture
+  reviewed_by: []
+  created_at: '2000-01-01T00:00:00Z'
+  last_verified_at: null
+  human_verification: UNREVIEWED
+evidence: []
+papers: []
+theorems:
+- id: thm_00000000000000000000000001
+  project_id: proj_00000000000000000000000001
+  title: Synthetic unproved assertion
+  statement: Placeholder assertion for graph and verification-state tests; not a claimed
+    theorem.
+  formal_statement: null
+  status: CONJECTURED
+  assumptions: []
+  dependencies: []
+  required_lemmas: []
+  proof_attempts: []
+  counterexample_attempts: []
+  known_gaps:
+  - No proof or scientific validation is represented.
+  references: []
+  supporting_claims: []
+  confidence: null
+  review_status: UNREVIEWED
+  human_verified: false
+  human_verification: UNREVIEWED
+  created_at: '2000-01-01T00:00:00Z'
+  updated_at: '2000-01-01T00:00:00Z'
+lemmas: []
+experiments: []
+agent_runs: []
+decisions:
+- id: dec_00000000000000000000000001
+  project_id: proj_00000000000000000000000001
+  decision_type: KILL
+  scope: HYPOTHESIS
+  target_id: hyp_00000000000000000000000002
+  reasoning_summary: Fictional KILL record used to test decision-history display.
+  supporting_evidence: []
+  opposing_evidence: []
+  confidence: null
+  decided_by: synthetic-fixture
+  agent_run_id: null
+  timestamp: '2000-01-01T00:00:00Z'
+  supersedes: null
+  next_action: null
+  decision_metrics: null
+  human_verification: UNREVIEWED
+- id: dec_00000000000000000000000002
+  project_id: proj_00000000000000000000000001
+  decision_type: RESTRICTED_GO
+  scope: PROJECT
+  target_id: proj_00000000000000000000000001
+  reasoning_summary: Fictional RESTRICTED_GO record used to test decision-history
+    display.
+  supporting_evidence: []
+  opposing_evidence: []
+  confidence: null
+  decided_by: synthetic-fixture
+  agent_run_id: null
+  timestamp: '2000-01-02T00:00:00Z'
+  supersedes: null
+  next_action: null
+  decision_metrics: null
+  human_verification: UNREVIEWED
+- id: dec_00000000000000000000000003
+  project_id: proj_00000000000000000000000001
+  decision_type: FREEZE
+  scope: PROJECT
+  target_id: proj_00000000000000000000000001
+  reasoning_summary: Fictional FREEZE record used to test decision-history display.
+  supporting_evidence: []
+  opposing_evidence: []
+  confidence: null
+  decided_by: synthetic-fixture
+  agent_run_id: null
+  timestamp: '2000-01-03T00:00:00Z'
+  supersedes: null
+  next_action: null
+  decision_metrics: null
+  human_verification: UNREVIEWED
+dependencies:
+- id: dep_00000000000000000000000001
+  source: proj_00000000000000000000000001
+  target: thm_00000000000000000000000001
+  dependency_type: REQUIRES
+  status: BLOCKED
+  description: Synthetic protocol review
+  created_at: '2000-01-01T00:00:00Z'
+  resolved_at: null
+artifacts: []
+checkpoints: []
+tasks: []
